@@ -4,28 +4,7 @@ from MR.models import Movie,Top_Movies
 import requests
 
 def index(request):
-    '''for i in range(2000,2023):
-        url = "https://moviesdatabase.p.rapidapi.com/titles"
 
-        querystring ={"list":"most_pop_movies","limit":"50","year":f"{i}"}
-
-        headers = {
-            "X-RapidAPI-Key": "6b32103fa2msh39f193544b02f1fp185db3jsn6623e4eac535",
-            "X-RapidAPI-Host": "moviesdatabase.p.rapidapi.com"
-        }
-
-        response = requests.request("GET", url, headers=headers, params=querystring)
-        data = response.json()
-        for result in data['results']:
-            try:
-                T = result['titleText']['text']
-                image_url = result['primaryImage']['url']
-                id = result['id']
-                release_year = result['releaseYear']['year']
-                movie = Movie(imdb_id=id,title=T,year=release_year,image=image_url)
-                movie.save()
-            except:
-                continue'''
     return HttpResponse("Done")
 
 def homepage(request):
